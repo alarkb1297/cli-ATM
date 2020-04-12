@@ -40,6 +40,7 @@ public class ATMImpl implements ATM {
         if (getAccount(accountId) == null) {
             ATMAccount account = new ATMAccountImpl(accountId, accountPin);
             this.accounts.put(accountId, account);
+            System.out.println(String.format("Account %s created.", accountId));
             return account;
         } else {
             System.out.println("Account already exists.");
